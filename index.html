@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satu Frame - Abadikan Momen Berharga Anda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(107, 12, 22, 0.1); }
+        .bg-burgundy { background-color: #6b0c16; }
+        .text-burgundy { color: #6b0c16; }
+        .border-burgundy { border-color: #6b0c16; }
+    </style>
+</head>
+<body class="bg-[#fcfaf9] text-stone-900">
+
+    <!-- Navigasi -->
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between h-20 items-center">
+            <span class="serif text-2xl font-bold italic">Satu <span class="text-burgundy">Frame</span></span>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-burgundy transition">Home</a>
+                <a href="#portfolio" class="hover:text-burgundy transition">Portofolio</a>
+                <a href="#pricing" class="hover:text-burgundy transition font-bold text-burgundy">Pricelist</a>
+            </div>
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-stone-600"><i class="fa-solid fa-bars text-2xl"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden bg-white border-t p-4 space-y-4 shadow-xl md:hidden">
+            <a href="#home" class="block font-bold">Home</a>
+            <a href="#portfolio" class="block font-bold">Portofolio</a>
+            <a href="#pricing" class="block font-bold text-burgundy">Pricelist</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="relative h-[85vh] flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 -z-10">
+            <!-- Menampilkan gambar hero dari folder lokal image/ -->
+            <img id="hero-img-display" src="image/hero.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/1920x1080?text=Upload+image/hero.jpg'">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="px-4">
+            <h1 class="serif text-5xl md:text-7xl font-bold mb-4 italic">Moments in a Frame</h1>
+            <p class="mb-8 opacity-80 text-lg tracking-wide">Jasa Fotografi Kediri & Nganjuk</p>
+            <a href="#pricing" class="bg-burgundy px-10 py-4 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">Cek Pricelist 2026</a>
+        </div>
+    </section>
+
+    <!-- Portofolio -->
+    <section id="portfolio" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+            <div class="text-left">
+                <h2 class="serif text-4xl font-bold mb-2">Portofolio Kami</h2>
+                <p class="text-stone-500 italic">"Menangkap jiwa dalam setiap bingkai."</p>
+            </div>
+            <a id="insta-btn" href="#" target="_blank" class="flex items-center gap-2 bg-stone-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-burgundy transition-colors">
+                Lihat di Instagram <i class="fa-brands fa-instagram text-xl"></i>
+            </a>
+        </div>
+        <div id="portfolio-container" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Foto portofolio akan muncul di sini dari jalur image/foto1.jpg, dll -->
+        </div>
+    </section>
+
+    <!-- Harga Wedding -->
+    <section id="pricing" class="py-24 px-4 bg-stone-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="serif text-4xl font-bold mb-4 text-burgundy">Paket Wedding 2026</h2>
+            <div class="w-20 h-1 bg-burgundy mx-auto mb-16"></div>
+            
+            <div id="wedding-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Paket wedding akan muncul di sini -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Harga Other -->
+    <section class="py-20 px-4 bg-white border-t">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div id="engagement-card" class="p-8 border-2 border-burgundy/10 rounded-3xl bg-[#fdf2f2]/30">
+                    <!-- Paket Engagement -->
+                </div>
+                <div id="graduation-card" class="p-8 border-2 border-stone-100 rounded-3xl bg-stone-50">
+                    <!-- Paket Graduation -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-burgundy text-white text-center">
+        <h3 class="serif text-3xl font-bold mb-8 italic">Abadikan Momenmu Sekarang</h3>
+        <a id="wa-main-btn" href="#" target="_blank" class="bg-white text-burgundy px-10 py-5 rounded-full font-bold shadow-2xl inline-flex items-center gap-3 text-xl hover:scale-105 transition-transform">
+            <i class="fa-brands fa-whatsapp text-2xl"></i> Konsultasi via WhatsApp
+        </a>
+        <div class="mt-20 opacity-50 text-[11px] tracking-widest uppercase">
+            <p id="copyright-text"></p>
+        </div>
+    </footer>
+
+    <script>
+        /** * EDIT KONTEN MANUAL DI SINI 
+         * Ganti jalur file gambar di bawah ini sesuai dengan folder proyek Anda.
+         */
+        const currentConfig = {
+            whatsapp: "6281357709484",
+            instagram: "satuframe.pict",
+            location: "Kediri - Nganjuk",
+            
+            // Pastikan Anda memiliki file image/hero.jpg di folder proyek
+            heroImage: "image/hero.jpg",
+            
+            // Ganti nama file di folder image/ agar sesuai dengan di bawah ini
+            portfolio: {
+                foto1: "image/foto1.jpg",
+                foto2: "image/foto2.jpg",
+                foto3: "image/foto3.jpg",
+                foto4: "image/foto4.jpg"
+            },
+
+            // Paket Wedding
+            weddingPackages: [
+                {
+                    name: "Ritus",
+                    price: "500.000",
+                    features: ["Unlimited Shoot", "1 Fotografer", "Almost Edit File", "All File in Google Drive", "Garansi File 1 Tahun", "6 Jam Kerja"]
+                },
+                {
+                    name: "Kala",
+                    price: "800.000",
+                    features: ["Unlimited Shoot", "2 Fotografer", "Almost Edit File", "All File in Google Drive", "Garansi File 1 Tahun", "6 Jam Kerja"]
+                },
+                {
+                    name: "Aksara",
+                    price: "1.100.000",
+                    features: ["Unlimited Shoot", "2 Fotografer", "Almost Edit File", "All File in Google Drive", "Garansi File 1 Tahun", "6 Jam Kerja", "Foto Album Cetak"]
+                },
+                {
+                    name: "Rekah",
+                    price: "1.500.000",
+                    features: ["Unlimited Shoot", "2 Fotografer", "Almost Edit File", "1-3 Menit Video Cinematic", "All File in Google Drive", "Garansi File 1 Tahun", "6 Jam Kerja"]
+                },
+                {
+                    name: "Swarna",
+                    price: "1.800.000",
+                    features: ["Unlimited Shoot", "2 Fotografer", "Almost Edit File", "1-3 Menit Video Cinematic", "Cetak Foto Album", "All File in Google Drive", "Garansi File 1 Tahun", "6 Jam Kerja"]
+                }
+            ],
+
+            // Paket Engagement
+            engagement: {
+                name: "Paket Engagement",
+                price: "400.000",
+                features: ["Unlimited Shoot", "Almost Edit File", "All File in Google Drive", "Garansi File 1 Tahun", "Max 4 Jam Kerja"]
+            },
+
+            // Paket Graduation
+            graduation: {
+                name: "Graduation",
+                price: "250.000",
+                features: ["60 Minute Service", "1 Graduate", "Family and Friends", "Almost Editing (Min 30 Foto)", "Unlimited Shoot", "All File in Google Drive"]
+            }
+        };
+
+        // Fungsi untuk merender tampilan berdasarkan data di atas
+        function renderApp() {
+            const config = currentConfig;
+
+            // Hero & Links
+            document.getElementById('hero-img-display').src = config.heroImage;
+            document.getElementById('insta-btn').href = `https://instagram.com/${config.instagram}`;
+            document.getElementById('wa-main-btn').href = `https://wa.me/${config.whatsapp}?text=Halo%20Satu%20Frame,%20saya%20ingin%20tanya%20paket%20fotonya`;
+            document.getElementById('copyright-text').innerText = `© 2026 Satu Frame - ${config.location}`;
+
+            // Portofolio
+            const portImages = [config.portfolio.foto1, config.portfolio.foto2, config.portfolio.foto3, config.portfolio.foto4];
+            document.getElementById('portfolio-container').innerHTML = portImages.map(img => `
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-stone-200 shadow-md">
+                    <img src="${img}" 
+                         class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                         onerror="this.src='https://via.placeholder.com/800x1000?text=Missing+${img}'">
+                </div>
+            `).join('');
+
+            // Wedding Grid
+            document.getElementById('wedding-grid').innerHTML = config.weddingPackages.map(p => `
+                <div class="bg-white p-10 rounded-[2.5rem] border border-stone-100 shadow-sm flex flex-col hover:shadow-xl transition-shadow border-t-4 border-t-burgundy">
+                    <h3 class="serif text-2xl font-bold text-burgundy mb-2">${p.name}</h3>
+                    <div class="text-2xl font-black mb-8">IDR ${p.price}</div>
+                    <ul class="text-sm space-y-3 mb-8 text-left flex-grow opacity-80">
+                        ${p.features.map(f => `<li><i class="fa-solid fa-check text-burgundy mr-2"></i>${f}</li>`).join('')}
+                    </ul>
+                    <a href="https://wa.me/${config.whatsapp}" class="block w-full py-4 rounded-full border-2 border-burgundy text-burgundy font-bold hover:bg-burgundy hover:text-white transition-colors">Booking Sekarang</a>
+                </div>
+            `).join('');
+
+            // Engagement
+            const eng = config.engagement;
+            document.getElementById('engagement-card').innerHTML = `
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                    <h3 class="serif text-3xl font-bold text-burgundy">${eng.name}</h3>
+                    <div class="text-2xl font-black">IDR ${eng.price}</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                    ${eng.features.map(f => `<div class="flex items-center gap-2">✓ ${f}</div>`).join('')}
+                </div>
+                <a href="https://wa.me/${config.whatsapp}" class="inline-block font-bold text-burgundy underline">Pesan Paket Engagement →</a>
+            `;
+
+            // Graduation
+            const grad = config.graduation;
+            document.getElementById('graduation-card').innerHTML = `
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                    <h3 class="serif text-3xl font-bold text-stone-800">${grad.name}</h3>
+                    <div class="text-2xl font-black">IDR ${grad.price}</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                    ${grad.features.map(f => `<div class="flex items-center gap-2">✓ ${f}</div>`).join('')}
+                </div>
+                <a href="https://wa.me/${config.whatsapp}" class="inline-block font-bold text-stone-800 underline">Pesan Paket Wisuda →</a>
+            `;
+        }
+
+        // Jalankan render saat halaman siap
+        window.onload = renderApp;
+    </script>
+</body>
+</html>
